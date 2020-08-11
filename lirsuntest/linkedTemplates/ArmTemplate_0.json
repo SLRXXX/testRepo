@@ -74,7 +74,7 @@
 					"type": "LinkedServiceReference"
 				},
 				"folder": {
-					"name": "lirsuntest/inner"
+					"name": "lirsuntest/inner/inneraa"
 				},
 				"annotations": [],
 				"type": "Binary",
@@ -82,6 +82,7 @@
 					"location": {
 						"type": "AzureBlobFSLocation",
 						"fileName": "response.json",
+						"folderPath": "xxx",
 						"fileSystem": "filesystem0805"
 					}
 				}
