@@ -14,6 +14,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "response.json",
+				"folderPath": "xxx",
 				"fileSystem": "filesystem0805"
 			}
 		}
