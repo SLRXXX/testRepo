@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "lirsuntest/inner/inner"
+			"name": "lirsuntest/inner"
 		},
 		"annotations": [],
 		"type": "Binary",
