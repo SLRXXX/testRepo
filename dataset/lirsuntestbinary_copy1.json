@@ -1,0 +1,22 @@
+{
+	"name": "lirsuntestbinary_copy1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lirsuntestgen2",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "lirsuntest/inner/inner"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "response.json",
+				"fileSystem": "filesystem0805"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
