@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1rename",
+	"name": "pipeline1",
 	"properties": {
 		"activities": [
 			{
@@ -47,8 +47,11 @@
 				]
 			}
 		],
+		"folder": {
+			"name": "aaa/aaa"
+		},
 		"annotations": [],
-		"lastPublishTime": "2020-08-11T11:49:11Z"
+		"lastPublishTime": "2020-08-26T11:07:12Z"
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }
