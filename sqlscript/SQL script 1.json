@@ -2,7 +2,7 @@
 	"name": "SQL script 1",
 	"properties": {
 		"content": {
-			"query": "-- type your sql script here, we now have intellisense\n选择 第一列 从所有表中",
+			"query": "-- type your sql script here, we now have intellisense\n选择 第一列 从所有表中\n\n东奔西走ads",
 			"metadata": {
 				"language": "sql"
 			},
