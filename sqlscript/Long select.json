@@ -1,0 +1,16 @@
+{
+	"name": "Long select",
+	"properties": {
+		"content": {
+			"query": "DECLARE @C INT = 0;\nWHILE @C < 32\nBEGIN\n    SELECT * FROM dbo.Nums ORDER BY n % (@C + 1)\n    SET @C = @C + 1\nEND\n\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "sql001",
+				"type": "SqlPool"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

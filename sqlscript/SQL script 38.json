@@ -1,0 +1,16 @@
+{
+	"name": "SQL script 38",
+	"properties": {
+		"content": {
+			"query": "-- type your sql script here, we now have intellisense\n-- This is auto-generated code\n-- Step 1: Create database where Views or External tables will be saved\n\nIF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'opendataset')\n    CREATE DATABASE [opendataset];\nGO\n\n-- Step 2: Create external data source\n\nUSE opendataset\nIF NOT EXISTS (SELECT * FROM sys.external_data_sources WHERE name = 'nyctlc')\n    CREATE EXTERNAL DATA SOURCE [nyctlc]\n    WITH ( LOCATION  = 'https://azureopendatastorage.blob.core.windows.net/nyctlc' )\nGO\n\n-- Step 3: Execute a TOP 100 query\n\nUSE opendataset\nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK             'yellow/puYear=*/puMonth=*/*.parquet',\n        FORMAT         = 'parquet',\n        DATA_SOURCE    = 'nyctlc'\n    ) AS [r];",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "master",
+				"type": "SqlOnDemand"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

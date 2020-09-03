@@ -1,0 +1,16 @@
+{
+	"name": "SQL script 39",
+	"properties": {
+		"content": {
+			"query": "-- type your sql script here, we now have intellisense\nCREATE TABLE [dbo].[Table1]\n(\n    col1 int NOT NULL\n)\n\nwhile 1=1\nBEGIN\n  insert into Table1 values(3)\nend\n\n\nCREATE USER [ktan@microsoft.com] FROM EXTERNAL PROVIDER;\n\nEXEC sp_addrolemember 'db_owner', 'ktan@microsoft.com'",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "sql001",
+				"type": "SqlPool"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

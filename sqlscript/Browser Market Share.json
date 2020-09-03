@@ -1,0 +1,16 @@
+{
+	"name": "Browser Market Share",
+	"properties": {
+		"content": {
+			"query": "-- type your sql script here, we now have intellisense\nSELECT *\nFROM (\n    VALUES \n        ('Chrome', 61.41),\n        ('Internet Explorer', 11.84),\n        ('Firefox', 10.85),\n        ('Edge', 4.67),\n        ('Safari', 4.18),\n        ('Other', 7.05))\nAS T(Name, Value)\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "master",
+				"type": "SqlOnDemand"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

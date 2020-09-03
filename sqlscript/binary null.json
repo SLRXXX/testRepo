@@ -1,0 +1,16 @@
+{
+	"name": "binary null",
+	"properties": {
+		"content": {
+			"query": "CREATE TABLE TABLEN(\n\tM varbinary(max)\n)\nWITH\n(\n    DISTRIBUTION = REPLICATE,\n    HEAP\n)\n\nINSERT INTO TABLEN\nVALUES (NULL)\n\nSELECT * FROM dbo.TABLEN",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "sql001",
+				"type": "SqlPool"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

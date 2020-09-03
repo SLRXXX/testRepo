@@ -1,0 +1,16 @@
+{
+	"name": "varbinary_max",
+	"properties": {
+		"content": {
+			"query": "SET ANSI_NULLS ON\nGO\nSET QUOTED_IDENTIFIER ON\nGO\n\nCREATE TABLE [dbo].[Models]\n( \n    [Id] [int]  NOT NULL,\n    [Model] [varbinary](max)  NULL,\n    [Description] [varchar](200)  NULL\n)\nWITH\n(\n    DISTRIBUTION = REPLICATE,\n    HEAP\n)\nGO\n\n\nSELECT * FROM Models",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "sql001",
+				"type": "SqlPool"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

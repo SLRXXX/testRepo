@@ -1,0 +1,16 @@
+{
+	"name": "all_objects",
+	"properties": {
+		"content": {
+			"query": "SELECT * FROM sys.all_objects",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "sql001",
+				"type": "SqlCompute"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

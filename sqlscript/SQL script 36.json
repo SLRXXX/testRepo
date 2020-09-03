@@ -1,0 +1,16 @@
+{
+	"name": "SQL script 36",
+	"properties": {
+		"content": {
+			"query": "SELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://azureopendatastorage.blob.core.windows.net/nyctlc/green/puYear=2018/puMonth=5/part-00087-tid-6037743401120983271-619c4849-c957-4290-a1b8-66832cb385b6-12506.c000.snappy.parquet',\n        FORMAT='PARQUET'\n    ) AS [r];\n\nasdfasdfasdfasdfasdf\n\n\ns",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "master",
+				"type": "SqlOnDemand"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

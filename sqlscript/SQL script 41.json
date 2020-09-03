@@ -1,0 +1,16 @@
+{
+	"name": "SQL script 41",
+	"properties": {
+		"content": {
+			"query": "-- This is auto-generated code\nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://lirsun.dfs.core.windows.net/filesystem/*.csv',\n        FORMAT = 'CSV',\n        PARSER_VERSION='2.0'\n    )\n    WITH (\n    [country_code] VARCHAR (5) COLLATE Latin1_General_BIN2,\n    [country_name] VARCHAR (100) COLLATE Latin1_General_BIN2,\n    [year] smallint,\n    [population] bigint\n    ) AS [r];\n\n\nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://stefansynapsetest2.dfs.core.windows.net/opendataset/*.csv',\n        FORMAT='CSV',\n        PARSER_VERSION='1.0'--,\n        --HEADER_ROW = TRUE\n    ) \n    WITH (\n    [country_code] VARCHAR (5) COLLATE Latin1_General_BIN2,\n    [country_name] VARCHAR (100) COLLATE Latin1_General_BIN2,\n    [year] smallint,\n    [population] bigint\n    ) AS [r];",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "master",
+				"type": "SqlOnDemand"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

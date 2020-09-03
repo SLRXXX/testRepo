@@ -1,0 +1,16 @@
+{
+	"name": "readNYTpublic",
+	"properties": {
+		"content": {
+			"query": "CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage\n    WITH (\n        TYPE = BLOB_STORAGE,\n        LOCATION = 'https://azureopendatastorage.blob.core.windows.net/nyctlc/green'\n    );\n\nSELECT TOP 100 * FROM OPENROWSET(\n   BULK  'puYear=2018/puMonth=5/part-00087-tid-6037743401120983271-619c4849-c957-4290-a1b8-66832cb385b6-12506.c000.snappy.parquet',\n   DATA_SOURCE = 'MyAzureBlobStorage',\n   FORMAT ='PARQUET',\n   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'\n) AS DataFile;\n\nCREATE EXTERNAL DATA SOURCE MyAzureBlobStorage\n    WITH (\n        TYPE = BLOB_STORAGE,\n        LOCATION = 'https://azureopendatastorage.blob.core.windows.net/nyctlc/green'\n    );\n\nSELECT TOP 100 * FROM OPENROWSET(\n   BULK  'puYear=2018/puMonth=5/part-00087-tid-6037743401120983271-619c4849-c957-4290-a1b8-66832cb385b6-12506.c000.snappy.parquet',\n   DATA_SOURCE = 'MyAzureBlobStorage',\n   FORMAT ='PARQUET',\n   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'\n) AS DataFile;\n\nCREATE EXTERNAL DATA SOURCE MyAzureBlobStorage\n    WITH (\n        TYPE = BLOB_STORAGE,\n        LOCATION = 'https://azureopendatastorage.blob.core.windows.net/nyctlc/green'\n    );\n\nSELECT TOP 100 * FROM OPENROWSET(\n   BULK  'puYear=2018/puMonth=5/part-00087-tid-6037743401120983271-619c4849-c957-4290-a1b8-66832cb385b6-12506.c000.snappy.parquet',\n   DATA_SOURCE = 'MyAzureBlobStorage',\n   FORMAT ='PARQUET',\n   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'\n) AS DataFile;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "master",
+				"type": "SqlOnDemand"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

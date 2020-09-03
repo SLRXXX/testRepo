@@ -1,0 +1,16 @@
+{
+	"name": "da da",
+	"properties": {
+		"content": {
+			"query": "-- type your sql script here, we now have intellisense\nSELECT 1 AS ID, 10 AS [Value]\nUNION ALL\nSELECT 2, 20\nUNION ALL\nSELECT 3, 40\n\n-- type your sql script here, we now have intellisense\nSELECT 1 AS ID, 10 AS [Value], 40 AS Val2\nUNION ALL\nSELECT 2, 20, 50\nUNION ALL\nSELECT 3, 40, 60\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "test001",
+				"type": "SqlPool"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"name": "SQL script 45",
+	"properties": {
+		"content": {
+			"query": "-- type your sql script here, we now have intellisense\n-- a",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "master",
+				"type": "SqlOnDemand"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

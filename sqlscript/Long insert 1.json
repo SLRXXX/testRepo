@@ -1,0 +1,16 @@
+{
+	"name": "Long insert 1",
+	"properties": {
+		"content": {
+			"query": "while 1=1\nBEGIN\n  insert into mycomputetable20 values(1)\nend\n\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "sql001",
+				"type": "SqlPool"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

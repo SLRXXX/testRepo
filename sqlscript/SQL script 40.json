@@ -1,0 +1,16 @@
+{
+	"name": "SQL script 40",
+	"properties": {
+		"content": {
+			"query": "--Create the tables and insert the values.  \nCREATE TABLE dbo.SUPPLY1 (  \nsupplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 1 and 150),  \nsupplier CHAR(50)  \n);  \n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "sql001",
+				"type": "SqlPool"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

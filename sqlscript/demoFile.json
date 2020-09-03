@@ -1,0 +1,16 @@
+{
+	"name": "demoFile",
+	"properties": {
+		"content": {
+			"query": "-- type your sql script here, we now have intellisense\n\nSELECT CAST( 123456 AS BINARY(4) ), CAST( 123456 AS VARBINARY(4) )\n\n-- type your sql script here, we now have intellisense\n\nSELECT CAST( 123456 AS VARBINARY(4) ), CAST( 123456 AS BINARY(4) )\n\n\nCREATE TABLE TABLEB(\n\tM varbinary(max)\n)\nWITH\n(\n    DISTRIBUTION = REPLICATE,\n    HEAP\n)\n\nINSERT INTO TABLEB VALUES(0x0001E240)\n\n\nSELECT * FROM TABLEB",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "master",
+				"type": "SqlOnDemand"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

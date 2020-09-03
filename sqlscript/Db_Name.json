@@ -1,0 +1,16 @@
+{
+	"name": "Db_Name",
+	"properties": {
+		"content": {
+			"query": "SELECT DB_NAME()\n\nUSE [a:]\n\nSELECT DB_NAME()\n\nUSE [<a>]\n\nSELECT DB_NAME()",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "master",
+				"type": "SqlOnDemand"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

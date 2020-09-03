@@ -1,0 +1,16 @@
+{
+	"name": "UBO",
+	"properties": {
+		"content": {
+			"query": "CREATE USER [xiaoqiao@microsoft.com] FROM EXTERNAL PROVIDER WITH DEFAULT_SCHEMA =[dbo]\nGO\n\nEXEC sp_droprolemember 'dbo', 'xiaoqiao@microsoft.com';\nEXEC sp_addrolemember 'db_datareader', 'xiaoqiao@microsoft.com';\n\nGRANT EXECUTE ON OBJECT::dbo.sp_get_ubo_settings TO 'xiaoqiao@microsoft.com';\n\n\n\nSELECT IS_ROLEMEMBER('db_owner')\n\nCREATE TABLE ubo_settings \n(\n    status BIT,\n    freq_interval INT,\n    freq_start_day DATE,\n    freq_time TIME,\n    max_total_mv_size INT\n);\n\nALTER PROCEDURE dbo.sp_configure_ubo\n    @enabled BIT,\n    @freq_interval INT,\n    @freq_start_day DATE,\n    @freq_time TIME,\n    @max_total_mv_size INT\nAS\n    IF EXISTS (SELECT * FROM dbo.ubo_settings)\n        IF @enabled = 1 \n            UPDATE dbo.ubo_settings\n            SET \n                status = @enabled,\n                freq_interval = @freq_interval,\n                freq_start_day = @freq_start_day,\n                freq_time = @freq_time,\n                max_total_mv_size = @max_total_mv_size\n        ELSE\n            UPDATE dbo.ubo_settings\n            SET status = 0\n    ELSE\n        INSERT INTO dbo.ubo_settings\n        VALUES (@enabled, @freq_interval, @freq_start_day, @freq_time, @max_total_mv_size)\n    \n\nALTER PROCEDURE dbo.sp_get_ubo_settings\nAS \n    SELECT status,\n        CASE WHEN status = 0 THEN NULL ELSE freq_interval END AS freq_interval,\n        CASE WHEN status = 0 THEN NULL ELSE freq_start_day END AS freq_start_day,\n        CASE WHEN status = 0 THEN NULL ELSE freq_time END AS freq_time,\n        CASE WHEN status = 0 THEN NULL ELSE max_total_mv_size END AS max_total_mv_size,\n        CAST(RAND() * 1000000000 AS INT) AS current_db_size\n    FROM dbo.ubo_settings\n\nEXEC dbo.sp_get_ubo_settings\n\nEXEC dbo.sp_configure_ubo\n    @enabled = 1,\n    @freq_interval = 7,\n    @freq_start_day = '20200202',\n    @freq_time = '10:58',\n    @max_total_mv_size = 33",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "zzz",
+				"type": "SqlPool"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

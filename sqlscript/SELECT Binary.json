@@ -1,0 +1,16 @@
+{
+	"name": "SELECT Binary",
+	"properties": {
+		"content": {
+			"query": "-- type your sql script here, we now have intellisense\n\nSELECT *\nFROM dbo.models\nWHERE Id = 64",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "sql001",
+				"type": "SqlPool"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}
