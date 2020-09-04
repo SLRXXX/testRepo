@@ -1,10 +1,6 @@
 {
 	"name": "lirsuntestbinary_copy1",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "lirsuntestgen2",
-			"type": "LinkedServiceReference"
-		},
 		"folder": {
 			"name": "lirsuntest/inner/inner"
 		},
