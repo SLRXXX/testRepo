@@ -2,14 +2,14 @@
 	"name": "Trigger 1",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [],
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
 				"frequency": "Minute",
 				"interval": 1,
-				"startTime": "2020-09-03T02:13:00.000Z",
+				"startTime": "2020-09-03T02:13:00Z",
 				"timeZone": "UTC"
 			}
 		}

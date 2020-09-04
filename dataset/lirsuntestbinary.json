@@ -1,12 +1,12 @@
 {
-	"name": "lirsuntestbinary_copy1",
+	"name": "lirsuntestbinary",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "lirsuntestgen2",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "lirsuntest/inner/inner"
+			"name": "lirsuntest"
 		},
 		"annotations": [],
 		"type": "Binary",
@@ -14,7 +14,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "response.json",
-				"folderPath": "xxx",
+				"folderPath": "aaa",
 				"fileSystem": "filesystem0805"
 			}
 		}
