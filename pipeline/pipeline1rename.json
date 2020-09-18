@@ -32,21 +32,12 @@
 						}
 					},
 					"enableStaging": false
-				},
-				"inputs": [
-					{
-						"referenceName": "lirsuntestbinary",
-						"type": "DatasetReference"
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "lirsuntestbinary",
-						"type": "DatasetReference"
-					}
-				]
+				}
 			}
 		],
+		"folder": {
+			"name": "abc"
+		},
 		"annotations": [],
 		"lastPublishTime": "2020-08-11T11:49:11Z"
 	},
