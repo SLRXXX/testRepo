@@ -37,18 +37,19 @@
 				},
 				"sparkVersion": "2.4",
 				"nodeCount": 10,
-				"cores": 80,
-				"memory": 472,
-				"extraHeader": null
-			}
+				"cores": 4,
+				"memory": 28,
+				"extraHeader": null,
+				"automaticScaleJobs": false
+			},
+			"sessionKeepAliveTimeout": 30
 		},
 		"cells": [
 			{
 				"cell_type": "code",
 				"source": [
-					"print 1"
+					"print 12"
 				],
-				"attachments": null,
 				"execution_count": 1
 			}
 		]
