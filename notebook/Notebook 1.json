@@ -4,7 +4,7 @@
 		"nbformat": 4,
 		"nbformat_minor": 2,
 		"bigDataPool": {
-			"referenceName": "testProd5",
+			"referenceName": "isolatedCompute",
 			"type": "BigDataPoolReference"
 		},
 		"sessionProperties": {
@@ -12,36 +12,44 @@
 			"driverCores": 4,
 			"executorMemory": "28g",
 			"executorCores": 4,
-			"numExecutors": 2
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2"
+			}
 		},
 		"metadata": {
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
 			"language_info": {
 				"name": "python"
 			},
 			"a365ComputeOptions": {
-				"id": "/subscriptions/051ddeca-1ed6-4d8b-ba6f-1ff561e5f3b3/resourceGroups/mandywtest/providers/Microsoft.Synapse/workspaces/mandyw1025a/bigDataPools/testProd5",
-				"name": "testProd5",
+				"id": "",
+				"name": "isolatedCompute",
 				"type": "Spark",
-				"endpoint": "https://mandyw1025a.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/testProd5",
+				"endpoint": "https://lirsuntestppe.dev.azuresynapse-dogfood.net/livyApi/versions/2019-11-01-preview/sparkPools/isolatedCompute",
 				"auth": {
 					"type": "AAD",
 					"authResource": "https://dev.azuresynapse.net"
 				},
 				"sparkVersion": "2.4",
-				"nodeCount": 3,
-				"cores": 4,
-				"memory": 28
-			},
-			"sessionKeepAliveTimeout": 30
+				"nodeCount": 10,
+				"cores": 80,
+				"memory": 472,
+				"extraHeader": null
+			}
 		},
 		"cells": [
 			{
 				"cell_type": "code",
 				"source": [
-					"声明变量 甲 赋值 2"
+					"print 1"
 				],
-				"outputs": [],
-				"execution_count": null
+				"attachments": null,
+				"execution_count": 1
 			}
 		]
 	}
