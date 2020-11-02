@@ -2,7 +2,7 @@
 	"name": "all_objects",
 	"properties": {
 		"content": {
-			"query": "SELECT * FROM sys.all_objectss;",
+			"query": "SELECT * FROM sys.all_objects;",
 			"metadata": {
 				"language": "sql"
 			},
