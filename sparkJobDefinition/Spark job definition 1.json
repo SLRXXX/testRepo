@@ -10,7 +10,7 @@
 		"jobProperties": {
 			"name": "Spark job definition 1",
 			"file": "abfss://lirsunfs@lirsungen2.dfs.core.windows.net/synapse/workspaces/lirsuntestppe/batchjobs/Spark%20job%20definition%201/download.jar",
-			"className": "abc",
+			"className": "abcd",
 			"conf": {
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2"
