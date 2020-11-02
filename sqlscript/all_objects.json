@@ -2,13 +2,13 @@
 	"name": "all_objects",
 	"properties": {
 		"content": {
-			"query": "SELECT * FROM sys.all_objects",
+			"query": "SELECT * FROM sys.all_objectss;",
 			"metadata": {
 				"language": "sql"
 			},
 			"currentConnection": {
 				"name": "sql001",
-				"type": "SqlCompute"
+				"type": "SqlPool"
 			}
 		},
 		"type": "SqlQuery"
