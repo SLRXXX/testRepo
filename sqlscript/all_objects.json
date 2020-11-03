@@ -8,7 +8,7 @@
 			},
 			"currentConnection": {
 				"name": "sql001",
-				"type": "SqlPool"
+				"type": "SqlCompute"
 			}
 		},
 		"type": "SqlQuery"
