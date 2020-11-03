@@ -8,7 +8,7 @@
 		},
 		"autoScale": {
 			"enabled": true,
-			"maxNodeCount": 10,
+			"maxNodeCount": 19,
 			"minNodeCount": 3
 		},
 		"nodeCount": 10,
