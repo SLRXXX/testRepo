@@ -39,14 +39,16 @@
 				"nodeCount": 10,
 				"cores": 4,
 				"memory": 28,
-				"extraHeader": null
-			}
+				"extraHeader": null,
+				"automaticScaleJobs": false
+			},
+			"sessionKeepAliveTimeout": 30
 		},
 		"cells": [
 			{
 				"cell_type": "code",
 				"source": [
-					"print 12"
+					"print 123"
 				],
 				"execution_count": 1
 			}
