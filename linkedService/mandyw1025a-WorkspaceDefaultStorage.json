@@ -1,0 +1,11 @@
+{
+	"name": "mandyw1025a-WorkspaceDefaultStorage",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://lirsun.dfs.core.windows.net"
+		},
+		"annotations": []
+	}
+}
