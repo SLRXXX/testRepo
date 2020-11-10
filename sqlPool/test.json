@@ -1,0 +1,11 @@
+{
+	"name": "test",
+	"location": "southcentralus",
+	"sku": {
+		"name": "DW100c"
+	},
+	"properties": {
+		"collation": "SQL_Latin1_General_CP1_CI_AS",
+		"annotations": []
+	}
+}
