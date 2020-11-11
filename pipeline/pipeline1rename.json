@@ -42,6 +42,12 @@
 				"userProperties": []
 			}
 		],
+		"variables": {
+			"a": {
+				"type": "String",
+				"defaultValue": "b"
+			}
+		},
 		"folder": {
 			"name": "abc"
 		},
