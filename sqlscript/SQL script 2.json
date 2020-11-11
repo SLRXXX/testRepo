@@ -2,7 +2,7 @@
 	"name": "SQL script 2",
 	"properties": {
 		"content": {
-			"query": "-- This is auto-generated code\nSELECT\n    TOP 100 *\n    --, JSON_QUERY(jsonContent, '$.json_object_name') AS json_object_name\n    --, JSON_VALUE(jsonContent, '$.json_scalar_value') AS json_scalar_value\nFROM\n    OPENROWSET(\n        BULK 'adl://fengqiadls.azuredatalakestore.net/EntryStream2.json', \n        FORMAT='CSV',\n        -- FIELDTERMINATOR and FIELDQUOTE are set to 0x0b as we do not expect to find it in the file.\n        FIELDTERMINATOR ='0x0b',\n        FIELDQUOTE = '0x0b',\n        -- Please check if current JSON has correct row terminator\n        -- Frequently used values:\n        -- '\\n'– This terminator should be used in case when 1 or multiple JSON objects are terminated by '\\n' in a file\n        -- '0x0b'– This terminator should be used in case if JSON objects are inside the array in a file\n        ROWTERMINATOR = '\\n'\n    )\n    WITH (\n        jsonContent nvarchar(4000)\n    ) AS [r]\n",
+			"query": "cc",
 			"metadata": {
 				"language": "sql"
 			},
