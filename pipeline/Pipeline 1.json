@@ -13,11 +13,7 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
-				"sqlPool": {
-					"referenceName": "bbb",
-					"type": "SqlPoolReference"
-				}
+				"userProperties": []
 			}
 		],
 		"annotations": []
