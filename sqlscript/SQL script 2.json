@@ -1,0 +1,16 @@
+{
+	"name": "SQL script 2",
+	"properties": {
+		"content": {
+			"query": "cc",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "master",
+				"type": "SqlOnDemand"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}
