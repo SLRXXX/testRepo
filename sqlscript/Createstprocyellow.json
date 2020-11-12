@@ -1,0 +1,16 @@
+{
+	"name": "Createstprocyellow",
+	"properties": {
+		"content": {
+			"query": "CREATE PROC [dbo].[Loadyellow] AS\nBEGIN\nIF object_id('yellow') is NULL\n\tCREATE TABLE yellow (\n\t\t[vendorID] varchar(8000),\n\t\t[tpepPickupDateTime] datetime2(7),\n\t\t[tpepDropoffDateTime] datetime2(7),\n\t\t[passengerCount] int,\n\t\t[tripDistance] float,\n\t\t[puLocationId] varchar(8000),\n\t\t[doLocationId] varchar(8000),\n\t\t[startLon] float,\n\t\t[startLat] float,\n\t\t[endLon] float,\n\t\t[endLat] float,\n\t\t[rateCodeId] int,\n\t\t[storeAndFwdFlag] varchar(8000),\n\t\t[paymentType] varchar(8000),\n\t\t[fareAmount] float,\n\t\t[extra] float,\n\t\t[mtaTax] float,\n\t\t[improvementSurcharge] varchar(8000),\n\t\t[tipAmount] float,\n\t\t[tollsAmount] float,\n\t\t[totalAmount] float\n\t\t)\n\tWITH (\n\t\tDISTRIBUTION = ROUND_ROBIN,\n\t\tCLUSTERED COLUMNSTORE INDEX\n\t\t)\nEND\n\n/* Load the data into your data warehouse */\nCOPY INTO [dbo].[yellow]\n\tFROM 'https://azureopendatastorage.blob.core.windows.net/nyctlc/yellow/puYear=2019/puMonth=*/*.parquet'\n    WITH\n\t(\n    \tFILE_TYPE = 'PARQUET'\n\t)\nOPTION (LABEL = 'COPY : Load [dbo].[yellow] - Taxi yellow dataset');\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "testpool",
+				"type": "SqlPool"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"name": "Pipeline 4",
+	"properties": {
+		"activities": [
+			{
+				"name": "testpool_dbo_testPoolProc",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[testPoolProc]",
+					"storedProcedureParameters": {
+						"param1": {
+							"value": "24",
+							"type": "Int32"
+						},
+						"param2": {
+							"value": "90",
+							"type": "Int32"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "workspacelite-WorkspaceDefaultSqlServer",
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"DBName": "testpool"
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2020-10-29T01:25:33Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

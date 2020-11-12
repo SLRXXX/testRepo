@@ -1,0 +1,16 @@
+{
+	"name": "SQL script 4",
+	"properties": {
+		"content": {
+			"query": "-- type your sql script here, we now have intellisense\n\nexec sp_describe_first_result_set N'\n    SELECT TOP 1 * FROM OPENROWSET (\n        BULK ''https://amnateuap2.dfs.core.windows.net/amnateuap2fs/testdata.snappy.parquet''\n       ,FORMAT = ''PARQUET'' \n    ) AS[r];'\n\n\n        -- https://amnateuap2.dfs.core.windows.net/amnateuap2fs/testdata.snappy.parquet",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"name": "master",
+				"type": "SqlOnDemand"
+			}
+		},
+		"type": "SqlQuery"
+	}
+}
