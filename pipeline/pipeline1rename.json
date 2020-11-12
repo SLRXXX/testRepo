@@ -39,7 +39,11 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"sqlPool": {
+					"referenceName": "aaa",
+					"type": "SqlPoolReference"
+				}
 			}
 		],
 		"variables": {
