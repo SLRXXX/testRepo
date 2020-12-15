@@ -39,11 +39,7 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
-				"sqlPool": {
-					"referenceName": "aaa",
-					"type": "SqlPoolReference"
-				}
+				"userProperties": []
 			}
 		],
 		"variables": {
@@ -51,9 +47,6 @@
 				"type": "String",
 				"defaultValue": "b"
 			}
-		},
-		"folder": {
-			"name": "abc"
 		},
 		"annotations": [],
 		"lastPublishTime": "2020-08-11T11:49:11Z"
